@@ -327,7 +327,7 @@ ul.ForNav li:hover {
 @media (max-width: 673px) {
   div.category {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     flex-direction: column;
     position: absolute;
     right: 100px;
@@ -370,7 +370,7 @@ ul.ForNav li:hover {
 }
 .searchProduct  ul{
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 }
 .searchProduct img{
  width: 20px;

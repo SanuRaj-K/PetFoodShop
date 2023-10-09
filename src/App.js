@@ -45,7 +45,7 @@ function App() {
           <Route path="/Registration" Component={Registration} />
           <Route path="/Login" Component={Login} />
           <Route path="/" Component={MainPage} />
-          <Route path="/Cat" Component={Cat} />
+          {/* <Route path="/Cat" Component={Cat} /> */}
           <Route path="/Dog" Component={Dog} />
           <Route path="/Cart" Component={Cart} />
           <Route path="/Payment" Component={Payment} />
