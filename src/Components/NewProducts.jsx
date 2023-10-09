@@ -3,35 +3,36 @@ import { myContext } from "../App";
 import { useNavigate } from "react-router-dom";
 
 function NewProducts() {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const { productData, setProductData } = useContext(myContext);
   const [name, setName] = useState();
   const [price, setPrice] = useState();
   const [id, setId] = useState();
   const [image, setImage] = useState();
-  const [category, setCategory]=useState('Dog')
+  const [category, setCategory] = useState();
   const obj = {
     name: name,
     price: price,
     id: id,
-    category:category,
-    path:image,
-    
+    category: category,
+    path: image,
   };
- 
-  const handleUpdate = () => {
-    navigate('/Admin/Products')
-  setProductData([...productData, obj])
-  alert('Product Added Successfully')
 
- 
+  const handleUpdate = () => {
+  
+    setProductData([...productData, obj]);
+    if (obj.name === undefined) {
+     return alert("Please Enter Product Details");
+    } else 
+    navigate("/Admin/Products");
+   return  alert("Product Added Successfully");
+      
   };
   return (
     <div>
       <h2>Add Your New Products</h2>
       <form action="">
-        <img src={image} alt="imge"  />{" "}
-        <br /> <br />
+        <img src={image} alt="imge" /> <br /> <br />
         <label htmlFor="Id"> &nbsp; Id: &nbsp;</label>
         <input
           type="number"
@@ -62,12 +63,17 @@ function NewProducts() {
           name="price"
           id="price"
           onChange={(e) => setPrice(e.target.value)}
-        />{" "} <br /><br />
+        />{" "}
+        <br />
+        <br />
         <label htmlFor="cate">category:</label>
-        <select name="" id="" onChange={(e)=>setCategory(e.target.value)}>
+        <select
+          name="cate"
+          id="cate"
+          onChange={(e) => setCategory(e.target.value)}
+        >
           <option value="cat">cat</option>
           <option value="Dog">Dog</option>
-
         </select>
         <br /> <br />
         <span className="btn btn-success" onClick={() => handleUpdate()}>
