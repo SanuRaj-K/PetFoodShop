@@ -5,7 +5,7 @@ import Home from "./Components/Home";
 import Registration from "./Components/Registration";
 import Login from "./Components/Login";
 import MainPage from "./Components/MainPage";
-import Cat from "./Components/Cat";
+// import Cat from "./Components/Cat";
 import Dog from "./Components/Dog";
 import Cart from "./Components/Cart";
 import Payment from "./Components/Payment";
